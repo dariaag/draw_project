@@ -17,11 +17,18 @@ $(document).ready(function () {
         $("#wrapper").append($row.clone());
     }
 
+    //get random integer
+    function getRandomInt(min, max) {
+        return Math.floor(Math.random() * (max - min)) + min;
+      }
 
 
     function colors() {
-    $(this).css({'background':'#DBA8A0'});
+    var colorList = ['#DBA8A0','#CED7DB','#DDE0E8','#776B76'];
+    var backgroundColor = colorList[getRandomInt(0, colorList.length)];
+    $(this).css({'background': backgroundColor});
   }
 
   $('.square').on('mouseover', colors);
+
 });
