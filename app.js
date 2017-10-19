@@ -33,7 +33,7 @@ $(document).ready(function () {
 
   $('#size').on('click', function(){
     $('.row').remove();
-    size = +prompt('How may squares?');
+    size = +prompt('How many squares?');
     if(size<=0){
       size = 1;
     }
